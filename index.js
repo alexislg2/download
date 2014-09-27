@@ -126,10 +126,12 @@ Download.prototype.run = function (cb) {
 		var ret = [];
 		var len = 0;
 
+		/* I remove this part so that it can work on local host
+		//alexislg
 		if (!urlRegex().test(url)) {
 			done(new Error('Specify a valid URL'));
 			return;
-		}
+		}*/
 
 		request.get(url, self.opts)
 			.on('response', function (res) {
